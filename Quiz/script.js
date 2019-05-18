@@ -15,10 +15,17 @@ const questions = [
 
 let corret = 0;
 let current = 0;
+let time = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
     load_question();
+    setInterval(count,1000);
 });
+
+function count() {
+time++;   
+document.querySelector(".time").innerHTML = time;
+}
 
 function load_question() {
     document.querySelector("#question").innerHTML = questions[current].question;
